@@ -9,7 +9,7 @@ namespace CoffeeCounter
 {
   public static class CoffeeCalculator
   {
-    public const double EsCoef = ((float)212 / 100), V60Coef = ((float)145 / 240);
+    public const double EsCoef = 2.12, V60Coef = ((float)145 / 240);
 
 
     public static double EsMl2Mg(double ml)
