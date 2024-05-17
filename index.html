@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Calculator</title>
+    <style>
+        body {
+            background-color: #2e2c2c;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #FFFFFF;
+            max-width: 600px;
+            padding: 20px;
+            border: 20px solid #000000;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        .label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #E0E0E0;
+        }
+        .button {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .button:hover {
+            background-color: #333333;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Caffeine Calculator</h1>
+        <p>Enter the amount of espresso and filter coffee to calculate the total caffeine content.</p>
+        <label class="label" for="espresso">Espresso (ml)</label>
+        <input type="number" id="espresso" name="espresso" min="0" placeholder="Enter ml of espresso">
+        <label class="label" for="filterCoffee">Filter Coffee (ml)</label>
+        <input type="number" id="filterCoffee" name="filterCoffee" min="0" placeholder="Enter ml of filter coffee">
+        <button class="button" type="button" onclick="calculateCaffeine()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateCaffeine() {
+            const espressoMl = document.getElementById('espresso').value;
+            const filterCoffeeMl = document.getElementById('filterCoffee').value;
+            
+            // Caffeine content: approximately 64 mg per 30 ml of espresso and 14 mg per 30 ml of filter coffee
+            const caffeineEspresso = (espressoMl / 30) * 64;
+            const caffeineFilterCoffee = (filterCoffeeMl / 30) * 14;
+            const totalCaffeine = caffeineEspresso + caffeineFilterCoffee;
+
+            document.getElementById('result').textContent = `Total Caffeine Content: ${totalCaffeine.toFixed(2)} mg`;
+        }
+    </script>
+</body>
+</html>
