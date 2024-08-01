@@ -1,7 +1,8 @@
 body {
-    background-color: #2e2c2c;
-    color: #000000;
-    font-family: Arial, sans-serif;
+    /*https://colorhunt.co/palette/f8f4e1af8f6f74512d543310*/
+    font-family: "Nanum Gothic Coding", monospace;
+    background-color: #FFFFFF;
+    color: #543310;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,7 +15,6 @@ body {
     background-color: #FFFFFF;
     max-width: 600px;
     padding: 20px;
-    border: 20px solid #000000;
 }
 h1 {
     font-size: 36px;
@@ -36,7 +36,8 @@ input[type="number"] {
     border: 1px solid #E0E0E0;
 }
 .button {
-    background-color: #000000;
+    font-family: "Nanum Gothic Coding", monospace;
+    background-color: #543310;
     color: #FFFFFF;
     padding: 10px 20px;
     text-transform: uppercase;
