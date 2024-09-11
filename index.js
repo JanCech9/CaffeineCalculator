@@ -8,4 +8,11 @@ function calculateCaffeine() {
     const totalCaffeine = caffeineEspresso + caffeineFilterCoffee;
 
     document.getElementById('result').textContent = `Total Caffeine Content: ${totalCaffeine.toFixed(2)} mg`;
+
+    if(totalCaffeine > 400){
+        document.getElementById('result').style.color = "red";
+    }
+    else{
+        document.getElementById('result').style.color = "#543310";
+    }
 }
